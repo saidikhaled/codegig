@@ -1,6 +1,7 @@
 # Gig application
 this is a simple application
-tech used : 
+tech used :
+node js 
 express js
 postegres
 sequelize
