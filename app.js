@@ -2,6 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
+const	session	=	require('express-session')
 
 
 //DATABASE
@@ -21,7 +22,7 @@ db
 const app = express();
 
 //to use sessions
-//app.use(session({ secret: "cats" }));
+app.use(session({ secret: "cats" }));
 
 // passport initialising and session
 //app.use(passport.initialize());
