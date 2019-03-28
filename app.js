@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+
 //DATABASE
 const db = require('./config/database');
 
@@ -17,9 +18,14 @@ db
   });
 
 
-
 const app = express();
 
+//to use sessions
+//app.use(session({ secret: "cats" }));
+
+// passport initialising and session
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 
 // Handelbars
@@ -40,6 +46,9 @@ app.get('/', (req, res) => {
 
 //Gig routes
 app.use('/gigs', require('./routes/gigs'));
+
+//login route
+app.use('/login', require('./routes/login'));
 
 const PORT = process.env.PORT || 5000;
 
