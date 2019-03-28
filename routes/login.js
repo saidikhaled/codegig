@@ -13,7 +13,7 @@ const Op = Sequelize.Op;
 router.get('/',(req, res)=> res.render('login'));     
 
 //Add user
-route
+
                                             
 
 module.exports = router;
